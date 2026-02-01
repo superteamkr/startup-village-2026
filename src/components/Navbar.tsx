@@ -17,8 +17,7 @@ const Navbar = () => {
         <div className="glass rounded-2xl px-6 py-3 flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="font-bold text-lg">
-            <span className="gradient-text">SVS</span>
-            <span className="text-muted-foreground ml-1">2026</span>
+            <span className="gradient-text">Startup Village Seoul</span>
           </a>
 
           {/* Desktop Nav */}

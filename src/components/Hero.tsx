@@ -86,7 +86,7 @@ const Hero = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-xl md:text-2xl lg:text-3xl font-light text-muted-foreground mb-12 max-w-3xl mx-auto"
           >
-            Build, Connect, and Win on{" "}
+            Connect, Build, and Win on{" "}
             <span className="text-primary font-medium">Solana</span>
           </motion.p>
 

@@ -8,55 +8,55 @@
 
 @layer base {
   :root {
-    /* Dark mode by default for that premium tech feel */
-    --background: 220 20% 4%;
-    --foreground: 0 0% 98%;
+    /* Light mode - clean, modern, Apple-inspired */
+    --background: 0 0% 100%;
+    --foreground: 220 20% 10%;
 
-    --card: 220 15% 8%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 98%;
+    --card-foreground: 220 20% 10%;
 
-    --popover: 220 15% 8%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
 
     /* Solana-inspired teal primary */
-    --primary: 174 100% 50%;
-    --primary-foreground: 220 20% 4%;
+    --primary: 174 80% 40%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 0 0% 90%;
+    --secondary: 220 15% 95%;
+    --secondary-foreground: 220 20% 20%;
 
-    --muted: 220 15% 12%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 280 80% 60%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 280 70% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 174 100% 50%;
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 174 80% 40%;
 
     --radius: 0.75rem;
 
     /* Solana gradient colors */
-    --gradient-start: 174 100% 50%;
-    --gradient-mid: 200 100% 55%;
-    --gradient-end: 280 80% 60%;
+    --gradient-start: 174 80% 40%;
+    --gradient-mid: 200 85% 50%;
+    --gradient-end: 280 70% 55%;
 
-    /* Hero glow */
-    --glow-primary: 174 100% 50%;
-    --glow-accent: 280 80% 60%;
+    /* Glow effects for light mode */
+    --glow-primary: 174 80% 40%;
+    --glow-accent: 280 70% 55%;
 
-    --sidebar-background: 220 15% 6%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 174 100% 50%;
-    --sidebar-primary-foreground: 220 20% 4%;
-    --sidebar-accent: 220 15% 12%;
-    --sidebar-accent-foreground: 0 0% 90%;
-    --sidebar-border: 220 15% 15%;
-    --sidebar-ring: 174 100% 50%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 20% 20%;
+    --sidebar-primary: 174 80% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 95%;
+    --sidebar-accent-foreground: 220 20% 20%;
+    --sidebar-border: 220 15% 90%;
+    --sidebar-ring: 174 80% 40%;
   }
 
   .dark {
@@ -79,6 +79,11 @@
     --border: 220 15% 18%;
     --input: 220 15% 18%;
     --ring: 174 100% 50%;
+    --gradient-start: 174 100% 50%;
+    --gradient-mid: 200 100% 55%;
+    --gradient-end: 280 80% 60%;
+    --glow-primary: 174 100% 50%;
+    --glow-accent: 280 80% 60%;
     --sidebar-background: 220 15% 6%;
     --sidebar-foreground: 0 0% 90%;
     --sidebar-primary: 174 100% 50%;
@@ -117,24 +122,25 @@
   .gradient-bg {
     background: linear-gradient(
       135deg,
-      hsl(var(--gradient-start) / 0.15) 0%,
-      hsl(var(--gradient-end) / 0.15) 100%
+      hsl(var(--gradient-start) / 0.08) 0%,
+      hsl(var(--gradient-end) / 0.08) 100%
     );
   }
 
-  /* Glow effects */
+  /* Glow effects - subtler for light mode */
   .glow-primary {
-    box-shadow: 0 0 60px hsl(var(--glow-primary) / 0.3),
-                0 0 120px hsl(var(--glow-primary) / 0.15);
+    box-shadow: 0 0 40px hsl(var(--glow-primary) / 0.2),
+                0 0 80px hsl(var(--glow-primary) / 0.1);
   }
 
   .glow-text {
-    text-shadow: 0 0 40px hsl(var(--glow-primary) / 0.5);
+    text-shadow: 0 0 30px hsl(var(--glow-primary) / 0.3);
   }
 
-  /* Glass morphism */
+  /* Glass morphism - adjusted for light */
   .glass {
-    @apply bg-card/50 backdrop-blur-xl border border-border/50;
+    @apply bg-card/80 backdrop-blur-xl border border-border/60;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
   }
 
   /* Smooth scrolling */

@@ -13,11 +13,11 @@ const Hero = () => {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover opacity-60"
+          className="w-full h-full object-cover opacity-40"
         >
           <source src={heroVideo} type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background" />
       </div>
 
       {/* Animated Gradient Orbs */}
@@ -25,26 +25,26 @@ const Hero = () => {
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
+            opacity: [0.15, 0.25, 0.15],
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-start/20 blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-start/30 blur-3xl"
         />
         <motion.div
           animate={{
             scale: [1.2, 1, 1.2],
-            opacity: [0.2, 0.4, 0.2],
+            opacity: [0.1, 0.2, 0.1],
           }}
           transition={{
             duration: 10,
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-accent/20 blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-accent/25 blur-3xl"
         />
       </div>
 

@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin } from "lucide-react";
 import heroBg from "@/assets/hero-bg.png";
+import heroBgMobile from "@/assets/hero-bg-mobile.png";
 import logoBlack from "@/assets/logo-black.svg";
 
 const Hero = () => {
@@ -25,10 +26,17 @@ const Hero = () => {
           style={{ scale: backgroundScale }}
           className="absolute inset-0 z-0"
         >
+          {/* Desktop background */}
           <img
             src={heroBg}
             alt="Hero Background"
-            className="w-full h-full object-cover"
+            className="hidden md:block w-full h-full object-cover"
+          />
+          {/* Mobile background */}
+          <img
+            src={heroBgMobile}
+            alt="Hero Background Mobile"
+            className="block md:hidden w-full h-full object-cover"
           />
         </motion.div>
 

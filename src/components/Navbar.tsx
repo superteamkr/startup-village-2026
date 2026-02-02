@@ -57,6 +57,12 @@ const Navbar = () => {
             >
               FAQ
             </a>
+            <a
+              href="https://luma.com/startupvillagekr"
+              className="text-sm font-bold text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Events
+            </a>
             <Button variant="black" size="sm" className="font-medium">
               Apply Now
             </Button>

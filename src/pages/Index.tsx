@@ -8,7 +8,7 @@ import Venue from "@/components/Venue";
 import Showcase2025 from "@/components/Showcase2025";
 import Gallery2025 from "@/components/Gallery2025";
 import Host from "@/components/Host";
-import SpeakersJudges from "@/components/SpeakersJudges";
+import Mentors from "@/components/Mentors";
 import Partners from "@/components/Partners";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
@@ -27,11 +27,11 @@ const Index = () => {
         <section id="schedule">
           <Schedule />
         </section>
+        <Mentors />
         <DemoDay />
         <Venue />
         <Showcase2025 />
         <Gallery2025 />
-        <SpeakersJudges />
         <Host />
         <Partners />
         <FAQ />

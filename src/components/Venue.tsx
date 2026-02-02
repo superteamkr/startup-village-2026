@@ -14,7 +14,7 @@ const Venue = () => {
                     className="text-center mb-12"
                 >
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
-                        Venue: <span className="gradient-text">Google Startup Campus</span>
+                        Demo Day <span className="gradient-text">Venue</span>
                     </h2>
                     <p className="text-lg text-muted-foreground">
                         오프라인 행사 장소

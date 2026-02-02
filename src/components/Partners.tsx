@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
 
 const partners = [
-    { name: "Solana Foundation", type: "Ecosystem" },
-    { name: "Superteam", type: "Community" },
-    { name: "Google for Startups", type: "Venue Partner" },
+    { name: "Google Startup Campus", type: "Venue" },
 ];
 
 const Partners = () => {

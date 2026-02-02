@@ -42,7 +42,7 @@ const FAQ = () => {
                 >
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
-                            FAQ
+                            <span className="gradient-text">FAQ</span>
                         </h2>
                         <p className="text-muted-foreground">행사에 대해 궁금한 점들을 확인해보세요.</p>
                     </div>

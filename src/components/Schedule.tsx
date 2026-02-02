@@ -40,8 +40,8 @@ const Schedule = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            The <span className="gradient-text">Journey</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
+            <span className="gradient-text">Schedule</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             From idea to launch in just seven transformative days.
@@ -60,18 +60,16 @@ const Schedule = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`relative flex items-center mb-12 ${
-                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              }`}
+              className={`relative flex items-center mb-12 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                }`}
             >
               {/* Timeline Dot */}
               <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary glow-primary z-10" />
 
               {/* Content Card */}
               <div
-                className={`ml-16 md:ml-0 md:w-[calc(50%-3rem)] ${
-                  index % 2 === 0 ? "md:mr-auto md:pr-12" : "md:ml-auto md:pl-12"
-                }`}
+                className={`ml-16 md:ml-0 md:w-[calc(50%-3rem)] ${index % 2 === 0 ? "md:mr-auto md:pr-12" : "md:ml-auto md:pl-12"
+                  }`}
               >
                 <div className="glass rounded-2xl p-6 hover:border-primary/30 transition-colors">
                   <span className="text-sm font-semibold text-primary mb-2 block">

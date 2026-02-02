@@ -99,9 +99,11 @@ const Hero = () => {
               transition={{ delay: 0.7, duration: 0.8 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
-              <Button size="lg" variant="black" className="font-medium">
-                Apply Now
-              </Button>
+              <a href="https://tally.so/r/RGPJ2K" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="black" className="font-medium">
+                  Apply Now
+                </Button>
+              </a>
             </motion.div>
           </motion.div>
         </div>

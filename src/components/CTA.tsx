@@ -47,11 +47,12 @@ const CTA = () => {
             of creation, connection, and competition.
           </p>
 
-          {/* CTA Buttons */}
           <div className="flex justify-center mb-12">
-            <Button size="lg" variant="black" className="font-medium">
-              Apply Now
-            </Button>
+            <a href="https://tally.so/r/RGPJ2K" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="black" className="font-medium">
+                Apply Now
+              </Button>
+            </a>
           </div>
 
         </motion.div>

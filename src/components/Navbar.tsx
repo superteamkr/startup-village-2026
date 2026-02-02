@@ -1,10 +1,21 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { cn } from "@/lib/utils";
+import logoColor from "@/assets/logo-color.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <motion.header
@@ -14,33 +25,39 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50"
     >
       <nav className="container mx-auto px-6 py-4">
-        <div className="glass rounded-2xl px-6 py-3 flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="font-bold text-lg">
-            <span className="gradient-text">Startup Village Seoul</span>
+        <div
+          className={cn(
+            "rounded-2xl px-6 py-3 flex items-center justify-between transition-all duration-300",
+            isScrolled
+              ? "backdrop-blur-md bg-background/[0.02] border-[1.5px] border-white/10"
+              : "bg-transparent"
+          )}
+        >
+          <a href="#" className="flex items-center">
+            <img src={logoColor} alt="Startup Village Seoul" className="h-10 md:h-[42px] w-auto" />
           </a>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             <a
               href="#about"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-bold text-muted-foreground hover:text-foreground transition-colors"
             >
               About
             </a>
             <a
               href="#schedule"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-bold text-muted-foreground hover:text-foreground transition-colors"
             >
               Schedule
             </a>
             <a
               href="#faq"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-bold text-muted-foreground hover:text-foreground transition-colors"
             >
               FAQ
             </a>
-            <Button variant="hero" size="sm">
+            <Button variant="black" size="sm" className="font-medium">
               Apply Now
             </Button>
           </div>
@@ -85,7 +102,7 @@ const Navbar = () => {
               >
                 FAQ
               </a>
-              <Button variant="hero" className="mt-2">
+              <Button variant="black" className="mt-2 font-medium">
                 Apply Now
               </Button>
             </div>

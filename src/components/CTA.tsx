@@ -38,7 +38,7 @@ const CTA = () => {
             </span>
           </motion.div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6">
             Ready to Build the{" "}
             <span className="gradient-text">Future?</span>
           </h2>
@@ -48,29 +48,12 @@ const CTA = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Button size="lg" variant="hero" className="group">
+          <div className="flex justify-center mb-12">
+            <Button size="lg" variant="black" className="font-medium">
               Apply Now
-              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button size="lg" variant="outline">
-              View FAQ
             </Button>
           </div>
 
-          {/* Deadline Notice */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5 }}
-            className="text-sm text-muted-foreground"
-          >
-            Application deadline:{" "}
-            <span className="text-primary font-semibold">
-              February 28, 2026
-            </span>
-          </motion.p>
         </motion.div>
       </div>
     </section>

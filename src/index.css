@@ -1,4 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@font-face {
+  font-family: 'Gong Gothic';
+  src: url('./assets/fonts/Gong Gothic OTF Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gong Gothic';
+  src: url('./assets/fonts/Gong Gothic OTF Light.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gong Gothic';
+  src: url('./assets/fonts/Gong Gothic OTF Medium.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gong Gothic';
+  src: url('./assets/fonts/Gong Gothic OTF Bold.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
 
 @tailwind base;
 @tailwind components;
@@ -8,7 +34,7 @@
 
 @layer base {
   :root {
-    /* Light mode - clean, modern, Apple-inspired */
+    /* ... (rest of the root remains same) */
     --background: 0 0% 100%;
     --foreground: 220 20% 10%;
 
@@ -101,36 +127,33 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Gong Gothic', -apple-system, BlinkMacSystemFont, sans-serif;
   }
 }
 
 @layer utilities {
+
   /* Solana gradient text */
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(
-      135deg,
-      hsl(var(--gradient-start)) 0%,
-      hsl(var(--gradient-mid)) 50%,
-      hsl(var(--gradient-end)) 100%
-    );
+    background-image: linear-gradient(135deg,
+        hsl(var(--gradient-start)) 0%,
+        hsl(var(--gradient-mid)) 50%,
+        hsl(var(--gradient-end)) 100%);
   }
 
   /* Gradient background */
   .gradient-bg {
-    background: linear-gradient(
-      135deg,
-      hsl(var(--gradient-start) / 0.08) 0%,
-      hsl(var(--gradient-end) / 0.08) 100%
-    );
+    background: linear-gradient(135deg,
+        hsl(var(--gradient-start) / 0.08) 0%,
+        hsl(var(--gradient-end) / 0.08) 100%);
   }
 
   /* Glow effects - subtler for light mode */
   .glow-primary {
     box-shadow: 0 0 40px hsl(var(--glow-primary) / 0.2),
-                0 0 80px hsl(var(--glow-primary) / 0.1);
+      0 0 80px hsl(var(--glow-primary) / 0.1);
   }
 
   .glow-text {

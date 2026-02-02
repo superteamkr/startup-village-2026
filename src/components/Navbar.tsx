@@ -112,6 +112,14 @@ const Navbar = () => {
               >
                 FAQ
               </a>
+              <a
+                href="https://luma.com/startupvillagekr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Events
+              </a>
               <a href="https://tally.so/r/RGPJ2K" target="_blank" rel="noopener noreferrer">
                 <Button variant="black" className="mt-2 font-medium">
                   Apply Now

@@ -68,7 +68,7 @@ const Hero = () => {
               <img
                 src={logoBlack}
                 alt="Startup Village Seoul 2026"
-                className="h-52 md:h-76 lg:h-[22.5rem] w-auto"
+                className="h-52 md:h-[20rem] lg:h-[22.5rem] w-auto"
               />
             </motion.div>
 

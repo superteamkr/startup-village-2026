@@ -19,7 +19,7 @@ const MainVideo = () => {
                     <div className="glass rounded-3xl overflow-hidden aspect-video relative group shadow-2xl">
                         <iframe
                             className="w-full h-full"
-                            src="https://www.youtube.com/embed/394wb968J68"
+                            src="https://www.youtube.com/embed/xyKyQRPzO24"
                             title="Main Promo Video"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen

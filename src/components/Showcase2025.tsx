@@ -1,25 +1,34 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Trophy } from "lucide-react";
+import bioletLogo from "@/assets/biolet.png";
+import buffTradeLogo from "@/assets/buff.trade.png";
+import latticaLogo from "@/assets/lattica.png";
 
 const winners = [
     {
-        place: "🥇 1등",
-        project: "DeFi Aggregator",
-        team: "Team Alpha",
-        description: "Solana 기반 최적 스왑 경로를 찾아주는 DEX 애그리게이터",
+        place: "🥇 First Place",
+        project: "Biolet",
+        team: "Biolet",
+        description: "View project details on Colosseum Arena",
+        link: "https://arena.colosseum.org/projects/explore/biolet",
+        image: bioletLogo,
     },
     {
-        place: "🥈 2등",
-        project: "NFT Marketplace",
-        team: "Team Beta",
-        description: "크리에이터 친화적인 NFT 마켓플레이스 플랫폼",
+        place: "🥈 Second Place",
+        project: "Buff.trade",
+        team: "Buff.trade",
+        description: "View project details on Colosseum Arena",
+        link: "https://arena.colosseum.org/projects/explore/buff.trade",
+        image: buffTradeLogo,
     },
     {
-        place: "🥉 3등",
-        project: "Social Wallet",
-        team: "Team Gamma",
-        description: "소셜 리커버리 기능이 탑재된 사용자 친화적 지갑",
+        place: "🥉 Third Place",
+        project: "Lattica",
+        team: "Lattica",
+        description: "View project details on Colosseum Arena",
+        link: "https://arena.colosseum.org/projects/explore/lattica",
+        image: latticaLogo,
     },
 ];
 
@@ -51,17 +60,36 @@ const Showcase2025 = () => {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.15, duration: 0.5 }}
                         >
-                            <Card className="h-full glass hover:border-primary/50 transition-all duration-300">
-                                <CardContent className="p-6">
-                                    <div className="flex items-center justify-between mb-4">
-                                        <span className="text-lg font-bold">{winner.place}</span>
-                                        <Trophy className="w-5 h-5 text-primary" />
+                            <a
+                                href={winner.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block h-full"
+                            >
+                                <Card className="h-full glass hover:border-primary/50 transition-all duration-300 cursor-pointer overflow-hidden flex flex-col">
+                                    <div className="h-48 overflow-hidden relative">
+                                        <img
+                                            src={winner.image}
+                                            alt={winner.project}
+                                            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                                        />
+                                        <div className="absolute top-2 right-2 bg-black/70 px-3 py-1 rounded-full backdrop-blur-sm border border-primary/20">
+                                            <div className="flex items-center gap-1.5">
+                                                <Trophy className="w-3.5 h-3.5 text-primary" />
+                                                <span className="text-xs font-bold text-white">{winner.place.split(' ')[0]}</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h3 className="text-xl font-semibold mb-1">{winner.project}</h3>
-                                    <p className="text-sm text-primary mb-3">{winner.team}</p>
-                                    <p className="text-muted-foreground text-sm">{winner.description}</p>
-                                </CardContent>
-                            </Card>
+                                    <CardContent className="p-6 flex-1 flex flex-col relative z-20 bg-background/50 backdrop-blur-md">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <span className="text-sm font-medium text-primary/80">{winner.place.split(' ').slice(1).join(' ')}</span>
+                                        </div>
+                                        <h3 className="text-xl font-bold mb-1">{winner.project}</h3>
+                                        <p className="text-sm text-foreground/80 mb-3 font-medium">{winner.team}</p>
+                                        <p className="text-muted-foreground text-sm line-clamp-2">{winner.description}</p>
+                                    </CardContent>
+                                </Card>
+                            </a>
                         </motion.div>
                     ))}
                 </div>
@@ -73,7 +101,7 @@ const Showcase2025 = () => {
                     transition={{ delay: 0.5 }}
                     className="text-center text-muted-foreground mt-8 text-sm"
                 >
-                    * 예시 데이터입니다. 실제 수상작 정보로 업데이트 예정
+                    {/* Updated with 2025 winners */}
                 </motion.p>
             </div>
         </section>

@@ -1,12 +1,54 @@
 import { motion } from "framer-motion";
+import svPitch from "@/assets/sv_pitch.png";
+import svSession from "@/assets/sv_session.png";
+import svEntrance from "@/assets/sv_entrance.png";
+import svEnding from "@/assets/sv_ending.png";
+import svHighlight from "@/assets/sv_highlight.png";
+import svGoods from "@/assets/sv_goods.png";
 
 const galleryImages = [
-    { id: 1, placeholder: "Kickoff Day 모습" },
-    { id: 2, placeholder: "팀 빌딩 세션" },
-    { id: 3, placeholder: "워크샵 진행" },
-    { id: 4, placeholder: "멘토링 시간" },
-    { id: 5, placeholder: "Demo Day 피칭" },
-    { id: 6, placeholder: "시상식 및 네트워킹" },
+    {
+        id: 1,
+        src: svEntrance,
+        title: "Welcome to Startup Village",
+        description: "Participants arriving at the event",
+        isPlaceholder: false
+    },
+    {
+        id: 2,
+        src: svSession,
+        title: "Collaboration Sessions",
+        description: "Teams working together on their projects",
+        isPlaceholder: false
+    },
+    {
+        id: 3,
+        src: svPitch,
+        title: "Final Pitches",
+        description: "Teams presenting their innovative solutions",
+        isPlaceholder: false
+    },
+    {
+        id: 4,
+        src: svEnding,
+        title: "Celebration",
+        description: "Closing ceremony and awards",
+        isPlaceholder: false
+    },
+    {
+        id: 5,
+        src: svHighlight,
+        title: "Event Highlights",
+        description: "More moments from the event",
+        isPlaceholder: false
+    },
+    {
+        id: 6,
+        src: svGoods,
+        title: "Startup Village Merch",
+        description: "Cool Merchandise for Startup Villagers",
+        isPlaceholder: false
+    },
 ];
 
 const Gallery2025 = () => {
@@ -38,29 +80,39 @@ const Gallery2025 = () => {
                             transition={{ delay: index * 0.1, duration: 0.5 }}
                             className="aspect-square relative overflow-hidden rounded-xl group cursor-pointer"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                                <p className="text-muted-foreground text-sm text-center px-4">
-                                    {image.placeholder}
-                                </p>
-                            </div>
-                            <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <p className="text-foreground text-sm font-medium">
-                                    사진 준비 중
-                                </p>
-                            </div>
+                            {image.isPlaceholder ? (
+                                <>
+                                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                                        <p className="text-muted-foreground text-sm text-center px-4">
+                                            {image.title}
+                                        </p>
+                                    </div>
+                                    <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        <p className="text-foreground text-sm font-medium">
+                                            사진 준비 중
+                                        </p>
+                                    </div>
+                                </>
+                            ) : (
+                                <>
+                                    <div className="absolute inset-0 overflow-hidden">
+                                        <img
+                                            src={image.src}
+                                            alt={image.title}
+                                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                        />
+                                    </div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                        <div className="p-4 w-full">
+                                            <h4 className="text-white font-bold text-sm mb-1">{image.title}</h4>
+                                            <p className="text-white/80 text-xs">{image.description}</p>
+                                        </div>
+                                    </div>
+                                </>
+                            )}
                         </motion.div>
                     ))}
                 </div>
-
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.5 }}
-                    className="text-center text-muted-foreground mt-8 text-sm"
-                >
-                    * 실제 행사 사진으로 업데이트 예정
-                </motion.p>
             </div>
         </section>
     );

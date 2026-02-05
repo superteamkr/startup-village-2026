@@ -15,10 +15,10 @@ const PersonCard = ({ person }: { person: { name: string; org: string; backgroun
                     <img
                         src={person.image}
                         alt={person.name}
-                        className="w-16 h-16 rounded-full object-cover mx-auto mb-4"
+                        className="w-[65px] h-[80px] rounded-xl object-cover mx-auto mb-4"
                     />
                 ) : (
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
+                    <div className="w-[65px] h-[80px] rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
                         <span className="text-xl font-bold text-primary">{person.name.charAt(0)}</span>
                     </div>
                 )}

@@ -24,7 +24,7 @@ const Partners = () => {
                             <img
                                 src={googleCloudLogo}
                                 alt="Google Cloud"
-                                className="h-8 w-auto"
+                                className="h-28 w-auto"
                             />
                         </motion.div>
                     </div>

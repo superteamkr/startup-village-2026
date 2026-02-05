@@ -15,28 +15,28 @@ const Gallery2025 = () => {
             id: 1,
             src: svEntrance,
             title: "Welcome to Startup Village",
-            description: t("행사장에 도착한 참가자들", "Participants arriving at the event"),
+            description: t("행사장 입구", "Event Entrance"),
             isPlaceholder: false
         },
         {
             id: 2,
             src: svSession,
             title: "Collaboration Sessions",
-            description: t("프로젝트를 함께 진행하는 팀들", "Teams working together on their projects"),
+            description: t("재미있는 세션들", "Fun sessions"),
             isPlaceholder: false
         },
         {
             id: 3,
             src: svPitch,
             title: "Final Pitches",
-            description: t("혁신적인 솔루션을 발표하는 팀들", "Teams presenting their innovative solutions"),
+            description: t("최종 데모데이", "Final Demo Day"),
             isPlaceholder: false
         },
         {
             id: 4,
             src: svEnding,
             title: "Celebration",
-            description: t("폐회식과 시상식", "Closing ceremony and awards"),
+            description: t("행사 마무리", "Event Ending"),
             isPlaceholder: false
         },
         {

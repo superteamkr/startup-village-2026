@@ -22,13 +22,13 @@ const About = () => {
             <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
               {t(
                 "Startup Village Seoul 2026은 솔라나 생태계 위의 실제 프로덕트의 설계, 개발, 출시를 목표로 하는 열정적인 팀들을 위해 마련된 집중 지원 프로그램입니다.",
-                "Startup Village Seoul 2026 is an intensive support program designed for passionate teams aiming to design, develop, and launch real products on the Solana ecosystem."
+                "Startup Village Seoul 2026 is an immersive one-week program designed for ambitious builders ready to create the next generation of Web3 applications on Solana."
               )}
             </p>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
               {t(
                 "해커톤 준비 전략부터 데모 데이 피칭 훈련, 그리고 전문가의 밀착 멘토링까지 성공적인 런칭에 필요한 모든 과정을 전부 경험하세요.",
-                "Experience everything you need for a successful launch—from hackathon prep strategies to Demo Day pitch training and hands-on expert mentorship."
+                "Join founders, developers, and innovators from around the world in Seoul's vibrant tech scene. Get hands-on guidance from Solana core contributors, access to exclusive resources, and the chance to win substantial prizes."
               )}
             </p>
 

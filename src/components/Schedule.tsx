@@ -7,28 +7,38 @@ const Schedule = () => {
   const schedule = [
     {
       day: "Day 1",
-      title: t("킥오프", "Kickoff"),
-      description: t("오프닝 세레모니", "Opening ceremony"),
+      title: t("오리엔테이션", "Orientation"),
+      description: t("오프닝 세레모니, 팀 빌딩, 아이디어 피칭 세션", "Opening ceremony, team formation, and idea pitching sessions"),
     },
     {
-      day: "Day 2-3",
-      title: t("빌드 스프린트", "Build Sprint"),
-      description: t("팀 빌딩, 워크숍, 멘토 세션", "Team formation, workshops and mentor sessions"),
+      day: "Day 2",
+      title: t("코워킹 & 믹서", "Coworking & Mixer"),
+      description: t("기술 워크숍과 멘토 세션을 통한 집중 개발", "Intensive development with technical workshops and mentor sessions"),
+    },
+    {
+      day: "Day 3",
+      title: t("멘토십", "Mentorship"),
+      description: t("기술 워크숍과 멘토 세션을 통한 집중 개발", "Intensive development with technical workshops and mentor sessions"),
     },
     {
       day: "Day 4",
-      title: t("중간 점검", "Mid-Point Check"),
-      description: t("진행 상황 리뷰, 피드백 세션", "Progress reviews, feedback sessions"),
+      title: t("아이디어 점검", "Ideas Check"),
+      description: t("진행 상황 리뷰, 피드백 세션, 피봇 기회", "Progress reviews, feedback sessions, and pivot opportunities"),
     },
     {
-      day: "Day 5-6",
-      title: t("마무리 및 준비", "Polish & Prepare"),
+      day: "Day 5",
+      title: t("피치 연습", "Pitch Trial"),
+      description: t("최종 개발, 피칭 준비, 데모 리허설", "Final development, pitch preparation, and demo rehearsals"),
+    },
+    {
+      day: "Day 6",
+      title: t("최종 리뷰", "Final Review"),
       description: t("최종 개발, 피칭 준비, 데모 리허설", "Final development, pitch preparation, and demo rehearsals"),
     },
     {
       day: "Day 7",
       title: t("데모 데이", "Demo Day"),
-      description: t("피칭, 심사, 최종 피드백", "Demo day pitching, judging, and final feedback"),
+      description: t("최종 발표, 심사, 시상식", "Final presentations, judging, and awards ceremony"),
     },
   ];
   return (

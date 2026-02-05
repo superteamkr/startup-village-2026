@@ -13,7 +13,7 @@ const FAQ = () => {
     const faqs = [
         {
             question: t("Startup Village Seoul 2026은 어떤 행사인가요?", "What is Startup Village Seoul 2026?"),
-            answer: t("Solana 생태계의 빌더들이 모여 1주일간 함께 거주하며 프로젝트를 개발하고 네트워킹하는 임머시브 프로그램입니다.", "An immersive program where builders in the Solana ecosystem live together for a week, developing projects and networking.")
+            answer: t("Solana 생태계의 빌더들이 모여 1주일간 함께 모여서 프로젝트를 개발하고 네트워킹하는 집중 프로그램입니다.", "An immersive program where builders in the Solana ecosystem gather for a week to develop projects and network.")
         },
         {
             question: t("참가 대상은 누구인가요?", "Who can participate?"),
@@ -21,7 +21,7 @@ const FAQ = () => {
         },
         {
             question: t("참가 비용이 있나요?", "Is there a participation fee?"),
-            answer: t("프로그램 참가 및 숙박(해당 시)은 무료로 제공됩니다. 개인 경비 및 항공권 등은 본인 부담입니다.", "Program participation and accommodation (if applicable) are provided free of charge. Personal expenses and airfare are the participant's responsibility.")
+            answer: t("프로그램 참가는 무료입니다. 개인 경비 및 항공권 등은 본인 부담입니다.", "Program participation is free. Personal expenses and airfare are the participant's responsibility.")
         },
         {
             question: t("개발 경험이 없어도 참여할 수 있나요?", "Can I participate without development experience?"),
@@ -29,7 +29,7 @@ const FAQ = () => {
         },
         {
             question: t("Demo Day 상금은 어떻게 되나요?", "What are the Demo Day prizes?"),
-            answer: t("최종 심사를 통해 우수 팀들에게 총 상금 $50,000 상당의 보상이 제공될 예정입니다.", "Outstanding teams will receive rewards totaling $50,000 through the final judging process.")
+            answer: t("최종 심사를 통해 우수 팀들에게 총 상금 $15,000 상당의 보상이 제공될 예정입니다.", "Outstanding teams will receive rewards totaling $15,000 through the final judging process.")
         }
     ];
     return (

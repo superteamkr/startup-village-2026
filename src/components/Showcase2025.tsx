@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Trophy } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Trophy, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import bioletLogo from "@/assets/biolet.png";
 import buffTradeLogo from "@/assets/buff.trade.png";
@@ -13,21 +14,18 @@ const Showcase2025 = () => {
         {
             place: "🥇 First Place",
             project: "Biolet",
-            description: t("프로젝트 콜로세움 페이지로 이동", "Go to Project Colosseum page"),
             link: "https://arena.colosseum.org/projects/explore/biolet",
             image: bioletLogo,
         },
         {
             place: "🥈 Second Place",
             project: "Buff.trade",
-            description: t("프로젝트 콜로세움 페이지로 이동", "Go to Project Colosseum page"),
             link: "https://arena.colosseum.org/projects/explore/buff.trade",
             image: buffTradeLogo,
         },
         {
             place: "🥉 Third Place",
             project: "Lattica",
-            description: t("프로젝트 콜로세움 페이지로 이동", "Go to Project Colosseum page"),
             link: "https://arena.colosseum.org/projects/explore/lattica",
             image: latticaLogo,
         },
@@ -64,7 +62,7 @@ const Showcase2025 = () => {
                                 className="block h-full"
                             >
                                 <Card className="h-full glass hover:border-primary/50 transition-all duration-300 cursor-pointer overflow-hidden flex flex-col">
-                                    <div className="h-48 overflow-hidden relative">
+                                    <div className="h-36 overflow-hidden relative">
                                         <img
                                             src={winner.image}
                                             alt={winner.project}
@@ -81,8 +79,11 @@ const Showcase2025 = () => {
                                         <div className="flex items-center justify-between mb-2">
                                             <span className="text-sm font-medium text-primary/80">{winner.place.split(' ').slice(1).join(' ')}</span>
                                         </div>
-                                        <h3 className="text-xl font-bold mb-1">{winner.project}</h3>
-                                        <p className="text-muted-foreground text-sm line-clamp-2">{winner.description}</p>
+                                        <h3 className="text-xl font-bold mb-3">{winner.project}</h3>
+                                        <Button variant="outline" size="sm" className="w-full group">
+                                            {t("더 알아보기", "Learn More")}
+                                            <ExternalLink className="ml-2 w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                                        </Button>
                                     </CardContent>
                                 </Card>
                             </a>

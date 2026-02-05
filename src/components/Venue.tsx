@@ -50,7 +50,7 @@ const Venue = () => {
                                     <h3 className="text-2xl font-bold mb-2">Google for Startups Campus</h3>
                                     <div className="flex items-center gap-2 text-muted-foreground">
                                         <MapPin className="w-4 h-4" />
-                                        <span>{t("서울특별시 강남구 역삼로", "Yeoksam-ro, Gangnam-gu, Seoul")}</span>
+                                        <span>{t("서울 강남구 영동대로 417", "417 Yeongdong-daero, Gangnam-gu, Seoul")}</span>
                                     </div>
                                 </div>
                                 <a

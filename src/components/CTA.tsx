@@ -46,7 +46,7 @@ const CTA = () => {
           </h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
             {t(
-              "Web3에서 가장 야심찬 빌더들과 함께 잊지 못할 일주일간의 창조, 연결, 경쟁에 참여하세요.",
+              <>솔라나의 가장 열정적인 빌더들과 함께 치열하게 고민하고, 교류하며<br />잊지 못할 일주일을 경험하세요.</>,
               "Join the most ambitious builders in Web3 for an unforgettable week of creation, connection, and competition."
             )}
           </p>

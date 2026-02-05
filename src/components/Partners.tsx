@@ -1,8 +1,5 @@
 import { motion } from "framer-motion";
-
-const partners = [
-    { name: "Google Startup Campus", type: "Venue" },
-];
+import googleCloudLogo from "@/assets/google_cloud.png";
 
 const Partners = () => {
     return (
@@ -18,19 +15,18 @@ const Partners = () => {
                         <span className="gradient-text">Partners</span>
                     </h2>
                     <div className="flex flex-wrap items-center justify-center gap-8">
-                        {partners.map((partner, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                                className="glass rounded-xl px-8 py-4 text-center"
-                            >
-                                <p className="font-semibold">{partner.name}</p>
-                                <p className="text-xs text-muted-foreground">{partner.type}</p>
-                            </motion.div>
-                        ))}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            className="glass rounded-xl px-8 py-6"
+                        >
+                            <img
+                                src={googleCloudLogo}
+                                alt="Google Cloud"
+                                className="h-8 w-auto"
+                            />
+                        </motion.div>
                     </div>
                 </motion.div>
             </div>

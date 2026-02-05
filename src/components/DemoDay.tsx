@@ -79,10 +79,7 @@ const DemoDay = () => {
                     transition={{ delay: 0.5 }}
                     className="text-center text-muted-foreground mt-12"
                 >
-                    {t(
-                        "* 특별상 및 파트너사 후원 상품이 추가될 수 있습니다",
-                        "* Additional special prizes and partner-sponsored awards may be added"
-                    )}
+
                 </motion.p>
             </div>
         </section>

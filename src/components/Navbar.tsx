@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/contexts/LanguageContext";
 import logoColor from "@/assets/logo-color.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,9 +67,20 @@ const Navbar = () => {
             >
               Events
             </a>
+
+            {/* Language Toggle */}
+            <button
+              onClick={() => setLanguage(language === 'ko' ? 'en' : 'ko')}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors"
+              title="언어 변경 / Change Language"
+            >
+              <Globe className="w-4 h-4 text-primary" />
+              <span className="text-sm font-bold text-primary">{language.toUpperCase()}</span>
+            </button>
+
             <a href="https://tally.so/r/RGPJ2K" target="_blank" rel="noopener noreferrer">
               <Button variant="black" size="sm" className="font-medium">
-                Apply Now
+                {t("지원하기", "Apply Now")}
               </Button>
             </a>
           </div>
@@ -120,9 +133,19 @@ const Navbar = () => {
               >
                 Events
               </a>
+
+              {/* Language Toggle */}
+              <button
+                onClick={() => setLanguage(language === 'ko' ? 'en' : 'ko')}
+                className="flex items-center gap-2 px-3 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors w-full justify-center"
+              >
+                <Globe className="w-4 h-4 text-primary" />
+                <span className="text-sm font-bold text-primary">{language.toUpperCase()}</span>
+              </button>
+
               <a href="https://tally.so/r/RGPJ2K" target="_blank" rel="noopener noreferrer">
-                <Button variant="black" className="mt-2 font-medium">
-                  Apply Now
+                <Button variant="black" className="mt-2 font-medium w-full">
+                  {t("지원하기", "Apply Now")}
                 </Button>
               </a>
             </div>

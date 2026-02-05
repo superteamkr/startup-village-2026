@@ -1,31 +1,33 @@
 import { motion } from "framer-motion";
 import { Trophy, Medal, Award } from "lucide-react";
-
-const prizes = [
-    {
-        place: "1st Place",
-        prize: "$5,000",
-        icon: Trophy,
-        color: "from-yellow-400 to-amber-500",
-        extras: ["Superteam Grant 후보", "투자자 미팅 기회"],
-    },
-    {
-        place: "2nd Place",
-        prize: "$3,000",
-        icon: Medal,
-        color: "from-slate-300 to-slate-400",
-        extras: ["Superteam 멤버십", "추가 멘토링"],
-    },
-    {
-        place: "3rd Place",
-        prize: "$1,500",
-        icon: Award,
-        color: "from-amber-600 to-amber-700",
-        extras: ["Superteam 멤버십"],
-    },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const DemoDay = () => {
+    const { t } = useLanguage();
+
+    const prizes = [
+        {
+            place: t("1등", "1st Place"),
+            prize: "$5,000",
+            icon: Trophy,
+            color: "from-yellow-400 to-amber-500",
+            extras: [t("Superteam Grant 후보", "Superteam Grant Candidate"), t("투자자 미팅 기회", "Investor Meeting Opportunity")],
+        },
+        {
+            place: t("2등", "2nd Place"),
+            prize: "$3,000",
+            icon: Medal,
+            color: "from-slate-300 to-slate-400",
+            extras: [t("Superteam 멤버십", "Superteam Membership"), t("추가 멘토링", "Additional Mentoring")],
+        },
+        {
+            place: t("3등", "3rd Place"),
+            prize: "$1,500",
+            icon: Award,
+            color: "from-amber-600 to-amber-700",
+            extras: [t("Superteam 멤버십", "Superteam Membership")],
+        },
+    ];
     return (
         <section className="py-24 bg-muted/30">
             <div className="container mx-auto px-6">
@@ -39,9 +41,7 @@ const DemoDay = () => {
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
                         Demo Day <span className="gradient-text">Prizes</span>
                     </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        여러분의 노력에 보답하는 풍성한 상금
-                    </p>
+
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -79,7 +79,10 @@ const DemoDay = () => {
                     transition={{ delay: 0.5 }}
                     className="text-center text-muted-foreground mt-12"
                 >
-                    * 특별상 및 파트너사 후원 상품이 추가될 수 있습니다
+                    {t(
+                        "* 특별상 및 파트너사 후원 상품이 추가될 수 있습니다",
+                        "* Additional special prizes and partner-sponsored awards may be added"
+                    )}
                 </motion.p>
             </div>
         </section>

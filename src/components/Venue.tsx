@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { MapPin, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Venue = () => {
+    const { t } = useLanguage();
     return (
         <section className="py-24">
             <div className="container mx-auto px-6">
@@ -16,9 +18,7 @@ const Venue = () => {
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
                         Demo Day <span className="gradient-text">Venue</span>
                     </h2>
-                    <p className="text-lg text-muted-foreground">
-                        오프라인 행사 장소
-                    </p>
+
                 </motion.div>
 
                 <motion.div
@@ -50,7 +50,7 @@ const Venue = () => {
                                     <h3 className="text-2xl font-bold mb-2">Google for Startups Campus</h3>
                                     <div className="flex items-center gap-2 text-muted-foreground">
                                         <MapPin className="w-4 h-4" />
-                                        <span>서울특별시 강남구 역삼로</span>
+                                        <span>{t("서울특별시 강남구 역삼로", "Yeoksam-ro, Gangnam-gu, Seoul")}</span>
                                     </div>
                                 </div>
                                 <a
@@ -59,13 +59,16 @@ const Venue = () => {
                                     rel="noopener noreferrer"
                                 >
                                     <Button variant="black" className="group">
-                                        장소 정보 보기
+                                        {t("장소 정보 보기", "View Venue Info")}
                                         <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                     </Button>
                                 </a>
                             </div>
                             <p className="mt-4 text-muted-foreground">
-                                Kickoff Day (2/22)와 Demo Day (2/28)는 Google for Startups Campus에서 오프라인으로 진행됩니다.
+                                {t(
+                                    "Kickoff Day (2/22)와 Demo Day (2/28)는 Google for Startups Campus에서 오프라인으로 진행됩니다.",
+                                    "Kickoff Day (2/22) and Demo Day (2/28) will be held in-person at Google for Startups Campus."
+                                )}
                             </p>
                         </div>
                     </div>

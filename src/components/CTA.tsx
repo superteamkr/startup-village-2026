@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import abstractImage from "@/assets/abstract-shapes.jpg";
 
 const CTA = () => {
+  const { t } = useLanguage();
   return (
     <section className="py-32 relative overflow-hidden">
       {/* Background Image */}
@@ -34,23 +36,25 @@ const CTA = () => {
           >
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-muted-foreground">
-              Applications Now Open
+              {t("지원 접수 중", "Applications Now Open")}
             </span>
           </motion.div>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6">
-            Ready to Build the{" "}
-            <span className="gradient-text">Future?</span>
+            {t("Ready to Build the", "Ready to Build the")}{" "}
+            <span className="gradient-text">{t("Future?", "Future?")}</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Join the most ambitious builders in Web3 for an unforgettable week
-            of creation, connection, and competition.
+            {t(
+              "Web3에서 가장 야심찬 빌더들과 함께 잊지 못할 일주일간의 창조, 연결, 경쟁에 참여하세요.",
+              "Join the most ambitious builders in Web3 for an unforgettable week of creation, connection, and competition."
+            )}
           </p>
 
           <div className="flex justify-center mb-12">
             <a href="https://tally.so/r/RGPJ2K" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="black" className="font-medium">
-                Apply Now
+                {t("지원하기", "Apply Now")}
               </Button>
             </a>
           </div>

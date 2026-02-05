@@ -1,46 +1,55 @@
 import { motion } from "framer-motion";
 import { Code2, Users, Trophy, Rocket, Lightbulb, Zap } from "lucide-react";
-
-const features = [
-  {
-    icon: Code2,
-    title: "Build",
-    description:
-      "Develop cutting-edge applications on Solana with hands-on workshops and expert mentorship.",
-  },
-  {
-    icon: Users,
-    title: "Connect",
-    description:
-      "Network with top founders, investors, and builders from the global Solana ecosystem.",
-  },
-  {
-    icon: Trophy,
-    title: "Win",
-    description:
-      "Compete for $500K+ in prizes and gain direct access to leading Web3 accelerators.",
-  },
-];
-
-const highlights = [
-  {
-    icon: Rocket,
-    stat: "100+",
-    label: "Teams",
-  },
-  {
-    icon: Lightbulb,
-    stat: "50+",
-    label: "Mentors",
-  },
-  {
-    icon: Zap,
-    stat: "$500K+",
-    label: "In Prizes",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Features = () => {
+  const { t } = useLanguage();
+
+  const features = [
+    {
+      icon: Code2,
+      title: "Build",
+      description: t(
+        "실습 워크샵과 전문가 멘토링을 통해 Solana에서 최첨단 애플리케이션을 개발하세요.",
+        "Develop cutting-edge applications on Solana with hands-on workshops and expert mentorship."
+      ),
+    },
+    {
+      icon: Users,
+      title: "Connect",
+      description: t(
+        "글로벌 Solana 생태계의 최고 창업가, 투자자, 빌더들과 네트워킹하세요.",
+        "Network with top founders, investors, and builders from the global Solana ecosystem."
+      ),
+    },
+    {
+      icon: Trophy,
+      title: "Win",
+      description: t(
+        "$500K+ 상금을 놓고 경쟁하고 선도적인 Web3 액셀러레이터에 직접 접근하세요.",
+        "Compete for $500K+ in prizes and gain direct access to leading Web3 accelerators."
+      ),
+    },
+  ];
+
+  const highlights = [
+    {
+      icon: Rocket,
+      stat: "100+",
+      label: t("참가팀", "Teams"),
+    },
+    {
+      icon: Lightbulb,
+      stat: "50+",
+      label: t("멘토", "Mentors"),
+    },
+    {
+      icon: Zap,
+      stat: "$500K+",
+      label: t("상금", "In Prizes"),
+    },
+  ];
+
   return (
     <section className="py-32 relative overflow-hidden">
       {/* Background Elements */}
@@ -59,8 +68,10 @@ const Features = () => {
             Why <span className="gradient-text">Join Us</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Seven days of intensive building, learning, and connecting with the
-            best minds in blockchain.
+            {t(
+              "블록체인 최고의 인재들과 함께하는 7일간의 집중적인 빌딩, 학습, 네트워킹.",
+              "Seven days of intensive building, learning, and connecting with the best minds in blockchain."
+            )}
           </p>
         </motion.div>
 

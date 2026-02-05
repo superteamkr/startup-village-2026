@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 import buildersImage from "@/assets/builders-workspace.jpg";
 
 const About = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-32 relative overflow-hidden">
       <div className="container mx-auto px-6">
@@ -17,24 +20,25 @@ const About = () => {
               What is <span className="gradient-text">Startup Village?</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-              Startup Village Seoul 2026 is an immersive one-week program
-              designed for ambitious builders ready to create the next
-              generation of Web3 applications on Solana.
+              {t(
+                "Startup Village Seoul 2026은 솔라나 생태계 위의 실제 프로덕트의 설계, 개발, 출시를 목표로 하는 열정적인 팀들을 위해 마련된 집중 지원 프로그램입니다.",
+                "Startup Village Seoul 2026 is an intensive support program designed for passionate teams aiming to design, develop, and launch real products on the Solana ecosystem."
+              )}
             </p>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              Join founders, developers, and innovators from around the world
-              in Seoul's vibrant tech scene. Get hands-on guidance from Solana
-              core contributors, access to exclusive resources, and the chance
-              to win substantial prizes.
+              {t(
+                "해커톤 준비 전략부터 데모 데이 피칭 훈련, 그리고 전문가의 밀착 멘토링까지 성공적인 런칭에 필요한 모든 과정을 전부 경험하세요.",
+                "Experience everything you need for a successful launch—from hackathon prep strategies to Demo Day pitch training and hands-on expert mentorship."
+              )}
             </p>
 
             {/* Quick Facts */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { label: "Duration", value: "7 Days" },
-                { label: "Location", value: "Seoul" },
-                { label: "Format", value: "In-Person" },
-                { label: "Cost", value: "Free*" },
+                { label: t("기간", "Duration"), value: t("7일", "7 Days") },
+                { label: t("장소", "Location"), value: t("서울", "Seoul") },
+                { label: t("형식", "Format"), value: t("오프라인", "In-Person") },
+                { label: t("비용", "Cost"), value: t("무료", "Free") },
               ].map((fact) => (
                 <div
                   key={fact.label}

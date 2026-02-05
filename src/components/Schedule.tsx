@@ -1,34 +1,36 @@
 import { motion } from "framer-motion";
-
-const schedule = [
-  {
-    day: "Day 1",
-    title: "Kickoff & Ideation",
-    description: "Opening ceremony, team formation, and idea pitching sessions",
-  },
-  {
-    day: "Day 2-3",
-    title: "Build Sprint",
-    description: "Intensive development with technical workshops and mentor sessions",
-  },
-  {
-    day: "Day 4",
-    title: "Mid-Point Check",
-    description: "Progress reviews, feedback sessions, and pivot opportunities",
-  },
-  {
-    day: "Day 5-6",
-    title: "Polish & Prepare",
-    description: "Final development, pitch preparation, and demo rehearsals",
-  },
-  {
-    day: "Day 7",
-    title: "Demo Day",
-    description: "Final presentations, judging, and awards ceremony",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Schedule = () => {
+  const { t } = useLanguage();
+
+  const schedule = [
+    {
+      day: "Day 1",
+      title: t("킥오프", "Kickoff"),
+      description: t("오프닝 세레모니", "Opening ceremony"),
+    },
+    {
+      day: "Day 2-3",
+      title: t("빌드 스프린트", "Build Sprint"),
+      description: t("팀 빌딩, 워크숍, 멘토 세션", "Team formation, workshops and mentor sessions"),
+    },
+    {
+      day: "Day 4",
+      title: t("중간 점검", "Mid-Point Check"),
+      description: t("진행 상황 리뷰, 피드백 세션", "Progress reviews, feedback sessions"),
+    },
+    {
+      day: "Day 5-6",
+      title: t("마무리 및 준비", "Polish & Prepare"),
+      description: t("최종 개발, 피칭 준비, 데모 리허설", "Final development, pitch preparation, and demo rehearsals"),
+    },
+    {
+      day: "Day 7",
+      title: t("데모 데이", "Demo Day"),
+      description: t("피칭, 심사, 최종 피드백", "Demo day pitching, judging, and final feedback"),
+    },
+  ];
   return (
     <section className="py-32 relative">
       <div className="container mx-auto px-6">
@@ -44,7 +46,7 @@ const Schedule = () => {
             <span className="gradient-text">Schedule</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            From idea to launch in just seven transformative days.
+            {t("아이디어에서 런칭까지, 7일간의 여정을 함께하세요", "From idea to launch in just seven transformative days.")}
           </p>
         </motion.div>
 

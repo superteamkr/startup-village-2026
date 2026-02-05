@@ -1,38 +1,40 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Trophy } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import bioletLogo from "@/assets/biolet.png";
 import buffTradeLogo from "@/assets/buff.trade.png";
 import latticaLogo from "@/assets/lattica.png";
 
-const winners = [
-    {
-        place: "🥇 First Place",
-        project: "Biolet",
-        team: "Biolet",
-        description: "View project details on Colosseum Arena",
-        link: "https://arena.colosseum.org/projects/explore/biolet",
-        image: bioletLogo,
-    },
-    {
-        place: "🥈 Second Place",
-        project: "Buff.trade",
-        team: "Buff.trade",
-        description: "View project details on Colosseum Arena",
-        link: "https://arena.colosseum.org/projects/explore/buff.trade",
-        image: buffTradeLogo,
-    },
-    {
-        place: "🥉 Third Place",
-        project: "Lattica",
-        team: "Lattica",
-        description: "View project details on Colosseum Arena",
-        link: "https://arena.colosseum.org/projects/explore/lattica",
-        image: latticaLogo,
-    },
-];
-
 const Showcase2025 = () => {
+    const { t } = useLanguage();
+
+    const winners = [
+        {
+            place: "🥇 First Place",
+            project: "Biolet",
+            team: "Biolet",
+            description: t("프로젝트 콜로세움 페이지로 이동", "Go to Project Colosseum page"),
+            link: "https://arena.colosseum.org/projects/explore/biolet",
+            image: bioletLogo,
+        },
+        {
+            place: "🥈 Second Place",
+            project: "Buff.trade",
+            team: "Buff.trade",
+            description: t("프로젝트 콜로세움 페이지로 이동", "Go to Project Colosseum page"),
+            link: "https://arena.colosseum.org/projects/explore/buff.trade",
+            image: buffTradeLogo,
+        },
+        {
+            place: "🥉 Third Place",
+            project: "Lattica",
+            team: "Lattica",
+            description: t("프로젝트 콜로세움 페이지로 이동", "Go to Project Colosseum page"),
+            link: "https://arena.colosseum.org/projects/explore/lattica",
+            image: latticaLogo,
+        },
+    ];
     return (
         <section className="py-24 bg-muted/30">
             <div className="container mx-auto px-6">
@@ -46,9 +48,7 @@ const Showcase2025 = () => {
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
                         2025 <span className="gradient-text">Winners</span>
                     </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        지난 Startup Village에서 탄생한 혁신적인 프로젝트들
-                    </p>
+
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">

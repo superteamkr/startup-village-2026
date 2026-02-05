@@ -27,7 +27,7 @@ const About = () => {
             </p>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
               {t(
-                "서울의 활기찬 테크 씬에서 전 세계의 창업자, 개발자, 혁신가들과 함께하세요. 솔라나 코어 컨트리뷰터들의 실전 가이드, 어디서도 구할 수 없는 핵심 리소스, 그리고 상금의 기회가 기다립니다.",
+                "해커톤 준비 전략부터 데모 데이 피칭 훈련, 그리고 전문가의 밀착 멘토링까지 성공적인 런칭에 필요한 모든 과정을 전부 경험하세요.",
                 "Join founders, developers, and innovators from around the world in Seoul's vibrant tech scene. Get hands-on guidance from Solana core contributors, access to exclusive resources, and the chance to win substantial prizes."
               )}
             </p>

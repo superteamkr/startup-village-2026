@@ -13,7 +13,6 @@ const Showcase2025 = () => {
         {
             place: "🥇 First Place",
             project: "Biolet",
-            team: "Biolet",
             description: t("프로젝트 콜로세움 페이지로 이동", "Go to Project Colosseum page"),
             link: "https://arena.colosseum.org/projects/explore/biolet",
             image: bioletLogo,
@@ -21,7 +20,6 @@ const Showcase2025 = () => {
         {
             place: "🥈 Second Place",
             project: "Buff.trade",
-            team: "Buff.trade",
             description: t("프로젝트 콜로세움 페이지로 이동", "Go to Project Colosseum page"),
             link: "https://arena.colosseum.org/projects/explore/buff.trade",
             image: buffTradeLogo,
@@ -29,7 +27,6 @@ const Showcase2025 = () => {
         {
             place: "🥉 Third Place",
             project: "Lattica",
-            team: "Lattica",
             description: t("프로젝트 콜로세움 페이지로 이동", "Go to Project Colosseum page"),
             link: "https://arena.colosseum.org/projects/explore/lattica",
             image: latticaLogo,
@@ -85,7 +82,6 @@ const Showcase2025 = () => {
                                             <span className="text-sm font-medium text-primary/80">{winner.place.split(' ').slice(1).join(' ')}</span>
                                         </div>
                                         <h3 className="text-xl font-bold mb-1">{winner.project}</h3>
-                                        <p className="text-sm text-foreground/80 mb-3 font-medium">{winner.team}</p>
                                         <p className="text-muted-foreground text-sm line-clamp-2">{winner.description}</p>
                                     </CardContent>
                                 </Card>

@@ -66,8 +66,8 @@ const Venue = () => {
                             </div>
                             <p className="mt-4 text-muted-foreground">
                                 {t(
-                                    "Kickoff Day (2/22)와 Demo Day (2/28)는 Google for Startups Campus에서 오프라인으로 진행됩니다.",
-                                    "Kickoff Day (2/22) and Demo Day (2/28) will be held in-person at Google for Startups Campus."
+                                    "Demo Day (2/28)는 Google for Startups Campus에서 오프라인으로 진행됩니다.",
+                                    "Demo Day (2/28) will be held in-person at Google for Startups Campus."
                                 )}
                             </p>
                         </div>

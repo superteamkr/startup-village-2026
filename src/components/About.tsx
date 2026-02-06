@@ -33,6 +33,25 @@ const About = () => {
             </p>
 
           </motion.div>
+
+          {/* YouTube Video */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="max-w-5xl mx-auto mt-8"
+          >
+            <div className="glass rounded-3xl overflow-hidden aspect-video relative shadow-2xl">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/3Ty9m6bHoRU"
+                title="Main Promo Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

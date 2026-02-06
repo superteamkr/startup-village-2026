@@ -47,6 +47,7 @@ const Mentors = () => {
         {
             name: "Joon Kim",
             org: "Plan G",
+            background: t("Web2/Web3를 넘나드는 Family Office의 수장", "Head of Family Office spanning Web2/Web3"),
         },
         {
             name: "Min",

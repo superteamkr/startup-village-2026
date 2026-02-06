@@ -69,7 +69,7 @@ const Hero = () => {
             >
               <img
                 src={logoBlack}
-                alt="Startup Village Seoul 2026"
+                alt="Startup Village Seoul Season 2"
                 className="h-52 md:h-[20rem] lg:h-[22.5rem] w-auto"
               />
             </motion.div>

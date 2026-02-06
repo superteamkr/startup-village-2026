@@ -6,7 +6,7 @@ const About = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-32 relative overflow-hidden">
+    <section className="py-32 relative overflow-hidden bg-muted/30">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           {/* Content */}

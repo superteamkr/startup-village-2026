@@ -88,7 +88,7 @@ const Schedule = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6">
             Season 2 <span className="gradient-text">Schedule</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">

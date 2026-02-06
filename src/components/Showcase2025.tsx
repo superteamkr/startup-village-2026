@@ -41,7 +41,7 @@ const Showcase2025 = () => {
                     className="text-center mb-12"
                 >
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
-                        2025 <span className="gradient-text">Winners</span>
+                        Season 1 <span className="gradient-text">Winners</span>
                     </h2>
 
                 </motion.div>

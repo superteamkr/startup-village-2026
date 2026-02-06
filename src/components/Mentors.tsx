@@ -83,8 +83,8 @@ const Mentors = () => {
                     </h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto">
                         {t(
-                            "다양한 분야의 전문가들이 여러분의 멘토 및 심사위원으로 준비되어있습니다",
-                            "Experts from various fields will mentor and judge your projects"
+                            "현업 전문가 멘토 및 심사위원",
+                            "Industry Expert Mentors & Judges"
                         )}
                     </p>
                 </motion.div>

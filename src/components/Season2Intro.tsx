@@ -28,7 +28,7 @@ const Season2Intro = () => {
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               {t(
                 "솔라나 불모지였던 한국이 솔라나 공식 Colosseum 해커톤에서 결선 진출 15팀과 트랙 우승 2팀을 배출한 성지로 거듭나기까지, 그 중심에는 스타트업 빌리지가 있었습니다.",
-                "Korea, once barren ground for Solana, transformed into a powerhouse producing 15 finalist teams and 2 track winners at the official Solana Colosseum hackathon — and Startup Village was at the heart of it all."
+                "Korea, once barren ground for Solana, transformed into a powerhouse producing 15 finalist teams and 2 track winners at the official Solana Colosseum hackathon and Startup Village was at the heart of it all."
               )}
             </p>
 

@@ -40,14 +40,13 @@ const Mentors = () => {
     const mentors = [
         {
             name: "Chris Park",
-            org: "Head of Korea, BitGo",
-            background: t("전) KB자산운용, Ignight Capital", "Former: KB Asset Management, Ignight Capital"),
+            org: "Head of Commercial Strategy, BitGo Korea",
+            background: t("전) 홍콩 프랍 트레이딩, KB자산운용, Ignight Capital", "Former: Hong Kong Prop Trading, KB Asset Management, Ignight Capital"),
             image: ChrisImg
         },
         {
-            name: "YK",
+            name: "Joon Kim",
             org: "Plan G",
-            background: t("전) Hashed", "Former: Hashed")
         },
         {
             name: "Min",
@@ -58,12 +57,12 @@ const Mentors = () => {
         {
             name: t("김지윤", "Jiyoon Kim"),
             org: t("CTO, 스테이지파이브", "CTO, Stage Five"),
-            background: t("전) 현대오토에버 CTO", "Former: Hyundai AutoEver CTO"),
+            background: t("전) CTO, 현대오토에버", "Former: CTO, Hyundai AutoEver"),
             image: JYImg
         },
         {
             name: "Jaehyun Kim",
-            org: "Superteam Korea Co-Lead",
+            org: "Co-Lead, Superteam Korea",
             image: JaehyunImg
         },
     ];

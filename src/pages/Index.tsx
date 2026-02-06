@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import MainVideo from "@/components/MainVideo";
+import Season2Intro from "@/components/Season2Intro";
 import About from "@/components/About";
 import Schedule from "@/components/Schedule";
 import DemoDay from "@/components/DemoDay";
@@ -24,6 +25,7 @@ const Index = () => {
         <section id="about">
           <About />
         </section>
+        <Season2Intro />
         <section id="schedule">
           <Schedule />
         </section>

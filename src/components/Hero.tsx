@@ -6,6 +6,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import heroBg from "@/assets/hero-bg.png";
 import heroBgMobile from "@/assets/hero-bg-mobile.png";
 import logoBlack from "@/assets/logo-black.svg";
+import solanaLogo from "@/assets/logo-dark.png";
+import superteamLogo from "@/assets/stkr_logo.png";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -52,6 +54,25 @@ const Hero = () => {
         />
       </div>
 
+      {/* Top Logo Bar */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="absolute top-16 md:top-24 left-0 right-0 z-40 flex items-center justify-center gap-8 md:gap-12"
+      >
+        <img
+          src={solanaLogo}
+          alt="Solana Foundation"
+          className="h-7 md:h-9 w-auto"
+        />
+        <img
+          src={superteamLogo}
+          alt="Superteam KR"
+          className="h-8 md:h-10 w-auto"
+        />
+      </motion.div>
+
       {/* Content - Absolute positioned over the sticky background to scroll naturally */}
       <div className="absolute inset-0 top-0 h-screen z-30 flex items-center justify-center">
         <div className="container mx-auto px-6 text-center">
@@ -65,7 +86,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="flex justify-center mb-20"
+              className="flex justify-center mb-12"
             >
               <img
                 src={logoBlack}
@@ -74,15 +95,24 @@ const Hero = () => {
               />
             </motion.div>
 
+            {/* Season 2 */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4"
+            >
+              Season 2
+            </motion.p>
+
             {/* Slogan */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-6 max-w-3xl mx-auto"
+              className="text-lg md:text-xl lg:text-2xl font-medium text-foreground mb-6 max-w-3xl mx-auto"
             >
-              Connect, Build, and Win on{" "}
-              <span className="gradient-text">Solana</span>
+              Connect, Build, and Win on Solana
             </motion.p>
 
             {/* Event Info */}

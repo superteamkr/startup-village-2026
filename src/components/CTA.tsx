@@ -36,19 +36,18 @@ const CTA = () => {
           >
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-muted-foreground">
-              {t("지원 접수 중", "Applications Now Open")}
+              {t("지금 지원하세요", "Apply Now")}
             </span>
           </motion.div>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6">
-            {t("Ready to Build the", "Ready to Build the")}{" "}
-            <span className="gradient-text">{t("Future?", "Future?")}</span>
+            Where Ideas Become{" "}
+            <span className="gradient-text">Reality</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            {language === 'ko' ? (
-              <>솔라나의 가장 열정적인 빌더들과 함께 치열하게 고민하고, 교류하며<br />잊지 못할 일주일을 경험하세요.</>
-            ) : (
-              "Join the most ambitious builders in Web3 for an unforgettable week of creation, connection, and competition."
+            {t(
+              "열정적인 빌더들과 치열하게 고민하고 교류하며 아이디어를 현실화할 수 있는 기회. 지금 바로 지원하세요!",
+              "An opportunity to turn your ideas into reality by collaborating and exchanging with passionate builders. Apply now!"
             )}
           </p>
 

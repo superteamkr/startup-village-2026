@@ -12,26 +12,61 @@ const FAQ = () => {
 
     const faqs = [
         {
-            question: t("Startup Village Seoul 2026은 어떤 행사인가요?", "What is Startup Village Seoul 2026?"),
-            answer: t("Solana 생태계의 빌더들이 모여 1주일간 함께 모여서 프로젝트를 개발하고 네트워킹하는 집중 프로그램입니다.", "An immersive program where builders in the Solana ecosystem gather for a week to develop projects and network.")
+            question: t("스타트업 빌리지는 어떤 프로그램인가요?", "What is Startup Village?"),
+            answer: t(
+                "솔라나 생태계 빌더들이 1주일간 함께 프로젝트를 개발하고 네트워킹하는 집중 프로그램입니다.",
+                "An intensive program where Solana ecosystem builders gather for a week to develop projects and network together."
+            )
         },
         {
             question: t("참가 대상은 누구인가요?", "Who can participate?"),
-            answer: t("Web3와 Solana에 관심 있는 개발자, 기획자, 디자이너라면 누구나 신청 가능합니다. 선발 과정을 통해 최종 참가자가 결정됩니다.", "Anyone interested in Web3 and Solana—developers, planners, and designers—can apply. Final participants are selected through a screening process.")
+            answer: t(
+                "블록체인/Web3와 솔라나에 관심 있는 창업자, 개발자, 기획자, 디자이너라면 누구나 지원 가능합니다. 제출해주신 지원서를 토대로 프로그램 참가자가 선정됩니다.",
+                "Anyone interested in blockchain/Web3 and Solana—founders, developers, planners, and designers—can apply. Participants are selected based on the submitted applications."
+            )
+        },
+        {
+            question: t("참가자 선발은 언제 확정되나요?", "When will participant selection be confirmed?"),
+            answer: t(
+                "선착순으로 지원서를 검토하며, 일찍 지원하실수록 참가가 빠르게 확정됩니다. 참가 인원이 제한되어 있으니 빠른 지원을 추천드립니다. (지원 최종 마감: 2월 19일 목요일 밤 12시)",
+                "Applications are reviewed on a first-come, first-served basis. The earlier you apply, the faster your participation will be confirmed. We recommend applying early as spots are limited. (Final deadline: Thursday, February 19th at midnight)"
+            )
         },
         {
             question: t("참가 비용이 있나요?", "Is there a participation fee?"),
-            answer: t("프로그램 참가는 무료입니다. 개인 경비 및 항공권 등은 본인 부담입니다.", "Program participation is free. Personal expenses and airfare are the participant's responsibility.")
+            answer: t(
+                "프로그램 참가는 무료입니다. 개인 노트북, 장비, 교통비 등은 본인 부담입니다.",
+                "Program participation is free. Personal laptops, equipment, and transportation costs are the participant's responsibility."
+            )
         },
         {
             question: t("개발 경험이 없어도 참여할 수 있나요?", "Can I participate without development experience?"),
-            answer: t("네, 열정 있는 기획자와 디자이너도 환영합니다. 다만 팀 빌딩 과정에서 개발 역량을 보유한 팀원을 만나는 것이 중요합니다.", "Yes, passionate planners and designers are also welcome. However, it's important to find team members with development skills during team building.")
+            answer: t(
+                "네, 솔라나 생태계 프로젝트 빌딩에 열정이 있으신 분은 누구나 환영합니다. 다만 팀 빌딩 과정에서 개발 역량을 보유한 팀원을 만나는 것이 중요합니다.",
+                "Yes, anyone passionate about building projects in the Solana ecosystem is welcome. However, it's important to find team members with development skills during team building."
+            )
         },
         {
-            question: t("Demo Day 상금은 어떻게 되나요?", "What are the Demo Day prizes?"),
-            answer: t("최종 심사를 통해 우수 팀들에게 총 상금 $15,000 상당의 보상이 제공될 예정입니다.", "Outstanding teams will receive rewards totaling $15,000 through the final judging process.")
+            question: t("자세한 일정은 어디서 확인하나요?", "Where can I check the detailed schedule?"),
+            answer: null,
+            answerWithLink: true
+        },
+        {
+            question: t("매일 모든 일정에 참여해야 하나요?", "Do I have to attend all sessions every day?"),
+            answer: t(
+                "성공적인 수료를 위해 모든 일정은 필수 참석입니다. 피치 못할 사정으로 불참하는 경우 사전에 운영진에게 사유를 공유해야 합니다.",
+                "All sessions are mandatory for successful completion. If you must be absent due to unavoidable circumstances, you must share the reason with the organizers in advance."
+            )
+        },
+        {
+            question: t("상금은 어떻게 받나요?", "How do I receive the prize?"),
+            answer: t(
+                "데모 데이 최종 심사를 통해 우수한 3개 프로젝트를 선발합니다. 선발된 팀은 Colosseum 해커톤에 프로젝트를 제출해야 상금을 수령할 수 있습니다.",
+                "Three outstanding projects are selected through the Demo Day final judging. Selected teams must submit their projects to the Colosseum hackathon to receive the prize."
+            )
         }
     ];
+
     return (
         <section id="faq" className="py-24">
             <div className="container mx-auto px-6">
@@ -46,7 +81,7 @@ const FAQ = () => {
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
                             <span className="gradient-text">FAQ</span>
                         </h2>
-                        <p className="text-muted-foreground">{t("행사에 대해 궁금한 점들을 확인해보세요.", "Find answers to common questions about the event.")}</p>
+                        <p className="text-muted-foreground">{t("자주 묻는 질문", "Frequently Asked Questions")}</p>
                     </div>
 
                     <Accordion type="single" collapsible className="w-full">
@@ -56,7 +91,21 @@ const FAQ = () => {
                                     {faq.question}
                                 </AccordionTrigger>
                                 <AccordionContent className="text-muted-foreground text-md pb-6 leading-relaxed">
-                                    {faq.answer}
+                                    {faq.answerWithLink ? (
+                                        <>
+                                            <a
+                                                href="https://lu.ma/startupvillagekr"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-primary hover:underline"
+                                            >
+                                                Luma {t("이벤트 페이지", "event page")}
+                                            </a>
+                                            {t("에서 날짜별 상세 일정/장소를 확인하실 수 있습니다.", " has detailed schedules and venues by date.")}
+                                        </>
+                                    ) : (
+                                        faq.answer
+                                    )}
                                 </AccordionContent>
                             </AccordionItem>
                         ))}

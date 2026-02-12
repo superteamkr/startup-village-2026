@@ -66,14 +66,14 @@ const Schedule = () => {
       badge: "Online",
     },
     {
-      day: "Day 6",
-      date: t("2월 27일 (금)", "Feb 27 (Fri)"),
-      title: t("최종 리뷰", "Final Review"),
+      day: "Day 7",
+      date: t("2월 28일 (금)", "Feb 28 (Fri)"),
+      title: t("데모 데이", "Demo Day"),
       description: t(
-        "개발 마무리 & 데모 데이 피칭 최종 리허설",
-        "Final development & Demo Day pitch final rehearsal"
+        "최종 발표 및 심사",
+        "Final presentation & Judging"
       ),
-      badge: "Online",
+      badge: "In-person",
     },
       
   ];

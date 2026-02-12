@@ -70,8 +70,8 @@ const Schedule = () => {
       date: t("2월 28일 (토)", "Feb 28 (Sat)"),
       title: t("데모 데이", "Demo Day"),
       description: t(
-        "최종 발표 및 심사 & 시상식",
-        "Final presentations, judging & awards ceremony"
+        "최종 발표 및 심사",
+        "Final presentations & judging"
       ),
       badge: "In-person",
     },

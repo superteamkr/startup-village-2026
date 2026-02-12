@@ -40,6 +40,13 @@ const FAQ = () => {
             )
         },
         {
+            question: t("숙박은 제공되나요?", "Is accommodation provided?"),
+            answer: t(
+                "숙박은 제공되지 않습니다.",
+                "Accommodation is not provided."
+            )
+        },
+        {
             question: t("개발 경험이 없어도 참여할 수 있나요?", "Can I participate without development experience?"),
             answer: t(
                 "네, 솔라나 생태계 프로젝트 빌딩에 열정이 있으신 분은 누구나 환영합니다. 다만 팀 빌딩 과정에서 개발 역량을 보유한 팀원을 만나는 것이 중요합니다.",

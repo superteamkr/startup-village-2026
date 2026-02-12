@@ -66,15 +66,16 @@ const Schedule = () => {
       badge: "Online",
     },
     {
-      day: "Day 7",
-      date: t("2월 28일 (토)", "Feb 28 (Sat)"),
-      title: t("데모 데이", "Demo Day"),
+      day: "Day 6",
+      date: t("2월 27일 (금)", "Feb 27 (Fri)"),
+      title: t("최종 리뷰", "Final Review"),
       description: t(
-        "최종 발표 및 심사",
-        "Final presentations & judging"
+        "개발 마무리 & 데모 데이 피칭 최종 리허설",
+        "Final development & Demo Day pitch final rehearsal"
       ),
-      badge: "In-person",
+      badge: "Online",
     },
+      
   ];
 
   return (
@@ -107,8 +108,8 @@ const Schedule = () => {
           {schedule.map((item, index) => (
             <motion.div
               key={item.day}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className={`relative flex items-center mb-12 ${
@@ -116,7 +117,7 @@ const Schedule = () => {
               }`}
             >
               {/* Timeline Dot */}
-              <div className="absolute left-8 md:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary glow-primary z-10" />
+              <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary glow-primary z-10" />
 
               {/* Content Card */}
               <div

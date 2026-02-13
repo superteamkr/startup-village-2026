@@ -8,25 +8,25 @@ const DemoDay = () => {
     const prizes = [
         {
             place: t("1등", "1st Place"),
-            prize: "TBD",
+            prize: "$6,000",
             icon: Trophy,
             color: "from-yellow-400 to-amber-500",
         },
         {
             place: t("2등", "2nd Place"),
-            prize: "TBD",
+            prize: "$4,500",
             icon: Medal,
             color: "from-slate-300 to-slate-400",
         },
         {
             place: t("3등", "3rd Place"),
-            prize: "TBD",
+            prize: "$3,000",
             icon: Award,
             color: "from-amber-600 to-amber-700",
         },
         {
-            place: "University Prize",
-            prize: "TBD",
+            place: t("학생상", "Student Prize"),
+            prize: "$1,500",
             icon: GraduationCap,
             color: "from-blue-400 to-blue-600",
         },
@@ -49,7 +49,7 @@ const DemoDay = () => {
                         {t("우수 프로젝트 3개 선발", "3 Outstanding Projects Selected")}
                     </p>
                     <p className="text-3xl font-bold gradient-text mb-6">
-                        {t("총 상금 $10,000+", "Total Prize $10,000+")}
+                        {t("총 상금 $15,000", "Total Prize $15,000")}
                     </p>
                 </motion.div>
 

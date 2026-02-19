@@ -50,6 +50,30 @@ const Season2Intro = () => {
               )}
             </p>
           </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="max-w-4xl mx-auto mt-12"
+          >
+            <p className="text-center text-muted-foreground mb-4">
+              {t(
+                "시즌 1 수상자 인터뷰에서 생생한 경험담을 확인해보세요.",
+                "Hear firsthand experiences from Season 1 winners in their interview."
+              )}
+            </p>
+            <div className="rounded-2xl overflow-hidden aspect-video shadow-xl">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/1RCbUO8kFK8"
+                title="Startup Village Season 2"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

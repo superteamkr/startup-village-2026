@@ -28,8 +28,8 @@ const FAQ = () => {
         {
             question: t("참가자 선발은 언제 확정되나요?", "When will participant selection be confirmed?"),
             answer: t(
-                "선착순으로 지원서를 검토하며, 일찍 지원하실수록 참가가 빠르게 확정됩니다. 참가 인원이 제한되어 있으니 빠른 지원을 추천드립니다. (지원 최종 마감: 2월 19일 목요일 밤 12시)",
-                "Applications are reviewed on a first-come, first-served basis. The earlier you apply, the faster your participation will be confirmed. We recommend applying early as spots are limited. (Final deadline: Thursday, February 19th at midnight)"
+                "선착순으로 지원서를 검토하며, 일찍 지원하실수록 참가가 빠르게 확정됩니다. 참가 인원이 제한되어 있으니 빠른 지원을 추천드립니다.",
+                "Applications are reviewed on a first-come, first-served basis. The earlier you apply, the faster your participation will be confirmed. We recommend applying early as spots are limited."
             )
         },
         {
@@ -57,13 +57,6 @@ const FAQ = () => {
             question: t("자세한 일정은 어디서 확인하나요?", "Where can I check the detailed schedule?"),
             answer: null,
             answerWithLink: true
-        },
-        {
-            question: t("매일 모든 일정에 참여해야 하나요?", "Do I have to attend all sessions every day?"),
-            answer: t(
-                "성공적인 수료를 위해 모든 일정은 필수 참석입니다. 피치 못할 사정으로 불참하는 경우 사전에 운영진에게 사유를 공유해야 합니다.",
-                "All sessions are mandatory for successful completion. If you must be absent due to unavoidable circumstances, you must share the reason with the organizers in advance."
-            )
         },
         {
             question: t("상금은 어떻게 받나요?", "How do I receive the prize?"),
